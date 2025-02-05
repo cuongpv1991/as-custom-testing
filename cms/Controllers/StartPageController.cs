@@ -26,4 +26,9 @@ public class StartPageController : PageControllerBase<StartPage>
 
         return View(model);
     }
+
+    public IActionResult Test() {
+        //var service = EPiServer.ServiceLocation.ServiceLocator.Current.GetService<IServiceProvider>();
+        return Content("TEST - OK");
+    }
 }
