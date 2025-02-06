@@ -34,7 +34,7 @@ public class Startup
 
         // Required by Wangkanai.Detection
         services.AddDetection();
-
+        services.AddMaxMindGeolocationProvider("App_Data\\GeoLite2-City.mmdb", "App_Data\\GeoLite2-City-Locations-en.csv");
         services.AddSession(options =>
         {
             options.IdleTimeout = TimeSpan.FromSeconds(10);
